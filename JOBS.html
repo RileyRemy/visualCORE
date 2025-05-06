@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title> Animation</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet">
+  <style>
+@keyframes gradient-flow{
+  0% { background-position: 0% 50% }
+  50% { background-position: 100% 50% }
+  100% {background-position: 0% 50%}
+}
+
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradient-flow 8s ease infinite;
+}
+
+    .embed-container {
+      position: relative;
+      padding-bottom: 56.25%; /* 16:9 aspect ratio */
+      height: 0;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .embed-container iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+  </style>
+</head>
+
+<body class="bg-[#1E1E1E]">
+  <!---HEADER--->
+  <header class="bg-transparent text-white">
+    <div class="container mx-auto flex items-center justify-between px-4 py-4 font-[Outfit] font-bold">
+      <div class="flex items-center space-x-4">
+       <a href="index.html" class="flex items-center space-x-4">
+        <img src="images/VisualCOREspherelogo.png" alt="VisualCOREspherelogo" class="w-[40px] h-auto">
+        <h1 class="text-3xl font-extrabold font-[Outfit]">VisualCORE</h1> 
+        </a>
+      </div>
+      <!---NAVIGATION BAR--->
+      <nav class="bg-transparent text-white space-x-10">
+        <a href="index.html" class="hover:text-pink-400">Home</a>
+        <a href="Account.html" class="hover:text-pink-400">Account</a>
+        <a href="Login.html" class="hover:text-pink-400">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!---BANNER--->
+  <div class="flex flex-col items-center">
+  <header class="animate-gradient bg-[linear-gradient(to_right,#805EFF,#4DC1FF,#FFFFFF)] h-[300px] w-full">
+    <div class="container h-full flex items-center justify-center mx-auto">
+      <div class="text-black text-5xl md:text-[100px] font-semibold font-[Outfit] text-center">JOB POSTINGS</div>
+    </div>
+  </header>
+
+<section class="bg-gray-50 py-10 px-6">
+  <div class="max-w-7xl mx-auto">
+    <h2 class="text-3xl font-bold mb-6 text-gray-800">Live Design Job Feed</h2>
+    
+    <div class="flex flex-wrap gap-6 justify-start">
+      <!-- Job Card -->
+      <div class="bg-white shadow-md rounded-2xl p-5 w-full md:w-[48%] lg:w-[31%] flex flex-col justify-between">
+        <div>
+          <h3 class="text-xl font-semibold text-pink-400">UX/UI Designer</h3>
+          <p class="text-gray-600">Figma Labs • Remote</p>
+          <p class="text-sm text-gray-500 mt-1">Posted: 2 days ago</p>
+        </div>
+        <a href="#" class="mt-4 inline-block text-sm font-medium text-white bg-pink-400 hover:bg-blue-700 px-4 py-2 rounded-lg">View Job</a>
+      </div>
+
+      <!-- Repeat more job cards below -->
+      <div class="bg-white shadow-md rounded-2xl p-5 w-full md:w-[48%] lg:w-[31%] flex flex-col justify-between mb-8">
+        <div>
+          <h3 class="text-xl font-semibold text-pink-400">Visual Designer</h3>
+          <p class="text-gray-600">Canva • NYC, NY</p>
+          <p class="text-sm text-gray-500 mt-1">Posted: Today</p>
+        </div>
+        <a href="#" class="mt-4 inline-block text-sm font-medium text-white bg-pink-400 hover:bg-green-700 px-4 py-2 rounded-lg">View Job</a>
+      </div>
+
+      <!-- Example Placeholder -->
+      <div class="bg-gray-100 border-2 border-dashed border-gray-300 rounded-2xl p-5 w-full md:w-[48%] lg:w-[31%] flex items-center justify-center text-pink-400 text-sm italic">
+        More job cards will be auto-loaded here...
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+  <!---FOOTER--->
+  <footer class="bg-transparent text-white text-center py-4">
+    <p class="text-[10px]">2025 VisualCORE. All rights reserved.</p>
+  </footer>
+</body>
+</html>
